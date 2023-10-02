@@ -18,5 +18,9 @@ public class Usuarios
         Telefono = telefono;
     }
 
+    public Usuarios(){
+        
+    }
+
 
 }

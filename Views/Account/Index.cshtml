@@ -2,7 +2,7 @@
     ViewData["Title"] = "Index";
 }
 
-<form class="form">
+<form class="form" action='@Url.Action("login")'>
     <h2 class="titulo">LOG IN</h2>
     
     <div class="inputs">
@@ -10,7 +10,12 @@
         <input type ="text" name="username" id="username"/>
         <label for="contraseña">Contraseña</label>
         <input type ="password" name="contraseña" id="contraseña"/>
+        <input type="submit"/>
+
+        <div class="botones">
+            <a href='@Url.Action("registro")'><span class="boton">No tengo cuenta</span></a>
+            <a href=""><span class="boton"></span></a>
+        </div>
 
     </div>
-
 </form>
