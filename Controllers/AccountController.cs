@@ -2,7 +2,7 @@
 
 namespace TP08.Controllers;
 
-public class Account : Controller
+public class AccountController : Controller
 {
     public IActionResult Index()
     {
@@ -18,7 +18,7 @@ public class Account : Controller
     {
         Console.WriteLine(usuario.Username + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         BD.crearCuenta(usuario);
-        return View("bienvenida");
+        return RedirectToAction("bienvenida");
     }
 
     public IActionResult login(Usuarios usuario)
@@ -27,5 +27,11 @@ public class Account : Controller
         {
             return RedirectToAction("bienvenida");
         } else return RedirectToAction("registro");
+    }
+
+    public IActionResult bienvenida()
+    {
+        
+        return View();
     }
 }

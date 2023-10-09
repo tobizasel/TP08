@@ -1,4 +1,4 @@
-<form action='@Url.Action("CrearCuenta")'>
+<form action='@Url.Action("CrearCuenta")' onsubmit="return validarContra()">
         <label for="Username">Username</label>
         <input type ="text" name="Username" id="Username"/>
         <label for="Contraseña">Contraseña</label>
@@ -10,5 +10,5 @@
         <label for="Telefono">Telefono</label>
         <input type ="number" name="Telefono" id="Telefono"/>
 
-        <button type="submit">Enviar</button>
+        <button type="submit" id="registro-boton">Enviar</button>
 </form>

@@ -23,6 +23,7 @@ class BD
 
     public static void crearCuenta(Usuarios usuario)
     {
+        Console.WriteLine(usuario.Mail);
         string query = "INSERT INTO Usuarios(Username, Contraseña, Mail, Telefono, Nombre) VALUES ( @ZUsername, @ZContraseña, @ZMail, @ZTelefono, @ZNombre)";
 
         using (SqlConnection BD = new SqlConnection(_connectionString))
